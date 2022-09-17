@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+        <div id="player">Current player: Player 1 (X)</div>
+    <div class="flexRow">
+        <div id="one" class="mainDivs" onclick="fieldOne() ; this.onclick = null;"></div>
+        <div id="two" class="mainDivs" onclick="fieldTwo() ; this.onclick = null;"></div>
+        <div id="three" class="mainDivs" onclick="fieldThree() ; this.onclick = null;"></div>
+    </div>
+    <div class="flexRow">
+        <div id="four" class="mainDivs" onclick="fieldFour() ; this.onclick = null;"></div>
+        <div id="five" class="mainDivs" onclick="fieldFive() ; this.onclick = null;"></div>
+        <div id="six" class="mainDivs" onclick="fieldSix() ; this.onclick = null;"></div>
+    </div>
+    <div class="flexRow">
+        <div id="seven" class="mainDivs" onclick="fieldSeven() ; this.onclick = null;"></div>
+        <div id="eight" class="mainDivs" onclick="fieldEight() ; this.onclick = null;"></div>
+        <div id="nine" class="mainDivs" onclick="fieldNine() ; this.onclick = null;"></div>
+    </div>
+    <br>
+    <button onclick="reset()">Start a new game!</button>
+        <script src="main.js" ></script>
+    </body>
+</html>
