@@ -42,7 +42,24 @@ background-color: grey;
     pointer-events: all;
 }
 
-.flexRow{
+.flexRow {
     display: flex;
-    justify-content: space-evenly;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.padding:hover {
+    padding: 20px;
+    font-size: 100px;
+}
+
+.flexRowChooser {
+    display: flex;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
 }

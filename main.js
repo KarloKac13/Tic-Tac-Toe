@@ -15,6 +15,14 @@ let seven = document.getElementById("seven");
 let eight = document.getElementById("eight");
 let nine = document.getElementById("nine");
 
+//Selected elements for display
+let gameDisplay = document.getElementById("display");
+gameDisplay.style.display = "none";
+let chooserDisplay = document.getElementById("choose");
+chooserDisplay.style.display = true;
+let chooserDisplayOptions = document.getElementById("options");
+chooserDisplayOptions.style.display = true;
+
 // Stored winner/draw/current player strings
 const winner = "Player 1 (X) wins!";
 const winner2 = "Player 2 (O) wins!";
@@ -22,10 +30,30 @@ const draw = "It's a draw!";
 const currentPlayer = "Current player: Player 1 (X)";
 const currentPlayer2 = "Current player: Player 2 (O)";
 
-// All the game logic
+//Displays elements based on click
+let chosenX = document.getElementById("x").addEventListener("click", function () {
+  gameDisplay.style.display = "flex";
+  chooserDisplay.style.display = "none";
+  chooserDisplayOptions.style.display = "none";
+  player1 = true;
+  player2 = false;
+  document.getElementById("player").innerHTML = currentPlayer;
+});
+
+let chosenO = document.getElementById("o").addEventListener("click", function () {
+  gameDisplay.style.display = "flex";
+  chooserDisplay.style.display = "none";
+  chooserDisplayOptions.style.display = "none";
+  player2 = true;
+  player1 = false;
+  document.getElementById("player").innerHTML = currentPlayer2;
+});
+
+// All the game logic // Added options to choose X or O
 document.querySelectorAll(".mainDivs").forEach(function (el) {
     el.addEventListener(
       "click", function () {
+        console.log(chosenX === true, chosenO === true);
         if (player1 === true) {
           el.innerHTML = "X";
           player1 = false;
@@ -34,7 +62,8 @@ document.querySelectorAll(".mainDivs").forEach(function (el) {
           el.innerHTML = "O";
           player1 = true;
           document.getElementById("player").innerHTML = currentPlayer;
-          }
+        };
+
           if (
             one.innerHTML === "X" &&
             two.innerHTML === "X" &&

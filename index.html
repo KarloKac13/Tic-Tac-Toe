@@ -5,7 +5,14 @@
         <link rel="stylesheet" href="style.css" >
     </head>
     <body>
-        <div id="player">Current player: Player 1 (X)</div>
+        <div id="choose" class="flexRowChooser" >Choose between</div>
+            <div id="options" class="flexRowChooser">
+                <div id="x" class="flexRowChooser padding">X</div>
+                <div id="o" class="flexRowChooser padding">O</div>
+            </div>
+        </div>
+<div id="display" class="display">
+        <div id="player"></div>
     <div class="flexRow">
         <div id="one" class="mainDivs" ></div>
         <div id="two" class="mainDivs" ></div>
@@ -24,5 +31,6 @@
     <br>
     <button onclick="reset()">Start a new game!</button>
         <script src="main.js" ></script>
+</div>
     </body>
 </html>
