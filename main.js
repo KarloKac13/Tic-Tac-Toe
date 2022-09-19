@@ -4,17 +4,6 @@
 let player1 = true;
 let player2 = false;
 
-//All fields by ID
-let one = document.getElementById("one");
-let two = document.getElementById("two");
-let three = document.getElementById("three");
-let four = document.getElementById("four");
-let five = document.getElementById("five");
-let six = document.getElementById("six");
-let seven = document.getElementById("seven");
-let eight = document.getElementById("eight");
-let nine = document.getElementById("nine");
-
 //Selected elements for display
 let gameDisplay = document.getElementById("display");
 gameDisplay.style.display = "none";
